@@ -19,7 +19,20 @@ if epa_dockets.status_code == 200:
     # Extract docket IDs where docketType is "Rulemaking"
     epa_docket_ids = [item['id'] for item in data['data'] if item['attributes']['docketType'] == 'Rulemaking']
 
-    # Print or return the list of docket IDs
-    print(epa_docket_ids)
+    for docket_id in epa_docket_ids:
+        # Construct the request URL
+        documents_endpoint = f"documents?filter[docketId]={docket_id}&api_key=YauEoriccK04skfmgd1wTAuHeXQ4dy48dzck8Wi4"
+        documents_req_url = f"{api_base_url}{documents_endpoint}"
+
+        # Make the request
+        response = requests.get(documents_req_url)
+
+        if response.status_code == 200:
+            data = response.json()  # Directly use .json() method to parse JSON
+            print(data)
+        else:
+            print(f"Failed to retrieve data for docket ID {docket_id}. Status code: {response.status_code}, Response: {response.text}")
+
+
 else:
     print("Failed to retrieve data. Status code:", epa_dockets.status_code)
