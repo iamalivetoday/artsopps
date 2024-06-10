@@ -1,0 +1,16 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  justify-content: space-between; /* Adjust as needed: flex-start, center, space-around, etc. */
+}
+
+.card {
+  box-sizing: border-box;
+  flex: 1 1 30%; /* Adjust percentage as needed for the number of columns */
+  max-width: 300px;
+  min-width: 200px; /* Set a minimum width to ensure proper layout */
+  background-color: lightblue; /* Temporary background for debugging */
+  border: 2px solid blue; /* Temporary border for debugging */
+}

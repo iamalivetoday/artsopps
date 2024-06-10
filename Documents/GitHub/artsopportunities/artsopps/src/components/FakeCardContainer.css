@@ -1,0 +1,8 @@
+.fake-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  justify-content: flex-start; /* Distribute cards evenly */
+  border: 2px solid red; /* Temporary border for debugging */
+}
