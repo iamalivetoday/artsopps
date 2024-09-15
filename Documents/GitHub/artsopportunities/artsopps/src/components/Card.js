@@ -12,7 +12,7 @@ const Card = ({ organization, opportunityName, type, prizeAmount, deadline, link
           <div className="card-body">
               <p>{opportunityName}</p>
               <p><strong>Deadline:</strong> {deadline}</p>
-              <p><strong>Amount:</strong> {type}</p>
+              <p><strong>Category:</strong> {type}</p>
           </div>
       </div>
   );

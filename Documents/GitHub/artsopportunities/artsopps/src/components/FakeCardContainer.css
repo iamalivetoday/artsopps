@@ -1,7 +1,45 @@
 .fake-card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  padding: 16px;
-  justify-content: center; /* Center the cards in the container */
+  justify-content: space-around;
+}
+
+.fake-card-container > div {
+  flex: 1 1 30%; /* Each card will take up around 30% of the container width */
+  max-width: 30%;
+  margin: 2px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 300px; /* Ensures all cards have a minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.card a {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.card a:hover {
+  text-decoration: underline;
 }
