@@ -1,13 +1,41 @@
+/* Main content container with filter and cards */
+.main-content {
+  display: flex;
+  width: 100%;
+  margin-top: 20px; /* Adjust if necessary to give space under the header */
+}
+
+/* Sidebar filter section */
+.filter-section {
+  width: 20%; /* Adjust width based on preference */
+  background-color: #f4f4f4;
+  padding: 10px;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+}
+
+.filter-section button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1em;
+  padding: 8px;
+}
+
+/* Card container on the right */
 .fake-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  width: 80%; /* Adjust to complement the filter section */
+  padding: 10px;
 }
 
+/* Individual card styles */
 .fake-card-container > div {
-  flex: 1 1 30%; /* Each card will take up around 30% of the container width */
+  flex: 1 1 30%;
   max-width: 30%;
-  margin: 2px;
+  margin: 10px;
   box-sizing: border-box;
 }
 
@@ -17,7 +45,7 @@
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-height: 300px; /* Ensures all cards have a minimum height */
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

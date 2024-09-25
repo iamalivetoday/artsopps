@@ -50,17 +50,37 @@ const FakeCardContainer = () => {
 
     return (
         <div>
-            <Header />
-            <div className="controls">
-                <button onClick={() => openModal('fee')}>Select Application Fee</button>
-                <button onClick={() => openModal('location')}>Select Location</button>
+            <Header /> {/* Header remains at the top */}
+
+            <div className="main-content">
+                {/* Sidebar filter section */}
+                <div className="filter-section">
+                    <button onClick={() => openModal('fee')}>Select Application Fee</button>
+                    <button onClick={() => openModal('location')}>Select Location</button>
+                </div>
+
+                {/* Card content section */}
+                <div className="fake-card-container">
+                    {opportunities.map((opportunity, index) => (
+                        <div key={index} onClick={() => handleCardClick(index)}>
+                            <Card
+                                organization={opportunity.Organization}
+                                opportunityName={opportunity["Opportunity Name"]}
+                                type={opportunity.Type}
+                                prizeAmount={opportunity["Prize Amount"] || "$"}
+                                deadline={opportunity["Deadline Month"] || "N/A"}
+                                link={opportunity.link || "#"}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {/* Application Fee Modal */}
             <Modal
                 isOpen={isModalOpen.fee}
                 onClose={() => closeModal('fee')}
-                title="Select Application Fee Options"
+                title="Application Fee"
                 options={["No fee", "Under $25", "$25-50", "Over $50", "Fee waiver available"]}
                 onSubmit={handleFeeSubmit}
             />
@@ -69,25 +89,10 @@ const FakeCardContainer = () => {
             <Modal
                 isOpen={isModalOpen.location}
                 onClose={() => closeModal('location')}
-                title="Select Location Options"
+                title="Location Options"
                 options={["North America", "Europe", "Asia", "Africa", "Remote"]}
                 onSubmit={handleLocationSubmit}
             />
-
-            <div className="fake-card-container">
-                {opportunities.map((opportunity, index) => (
-                    <div key={index} onClick={() => handleCardClick(index)}>
-                        <Card
-                            organization={opportunity.Organization}
-                            opportunityName={opportunity["Opportunity Name"]}
-                            type={opportunity.Type}
-                            prizeAmount={opportunity["Prize Amount"] || "$"}
-                            deadline={opportunity["Deadline Month"] || "N/A"}
-                            link={opportunity.link || "#"}
-                        />
-                    </div>
-                ))}
-            </div>
         </div>
     );
 };
