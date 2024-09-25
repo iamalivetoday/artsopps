@@ -55,8 +55,14 @@ const FakeCardContainer = () => {
             <div className="main-content">
                 {/* Sidebar filter section */}
                 <div className="filter-section">
-                    <button onClick={() => openModal('fee')}>Select Application Fee</button>
-                    <button onClick={() => openModal('location')}>Select Location</button>
+                  <h3>Filter By:</h3>
+                    <button onClick={() => openModal('fee')}>Application Fee</button>
+                    <button onClick={() => openModal('location')}>Location</button>
+                    <button onClick={() => openModal('location')}>Duration</button>
+                    <button onClick={() => openModal('location')}>Discipline</button>
+                    <button onClick={() => openModal('location')}>Deadline</button>
+
+
                 </div>
 
                 {/* Card content section */}
