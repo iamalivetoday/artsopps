@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Card from './Card';
 import Header from './Header';
 import './FakeCardContainer.css';
-import Modal from './Modal'; // Import the generalized modal
-import data from '../data.json'; // Adjust the path if necessary
+import Modal from './Modal';
+import data from '../data.json'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const FakeCardContainer = () => {
     const [opportunities, setOpportunities] = useState([]);
@@ -56,11 +58,21 @@ const FakeCardContainer = () => {
                 {/* Sidebar filter section */}
                 <div className="filter-section">
                   <h3>Filter By:</h3>
-                    <button onClick={() => openModal('fee')}>Application Fee</button>
-                    <button onClick={() => openModal('location')}>Location</button>
-                    <button onClick={() => openModal('location')}>Duration</button>
-                    <button onClick={() => openModal('location')}>Discipline</button>
-                    <button onClick={() => openModal('location')}>Deadline</button>
+                    <button onClick={() => openModal('fee')}>Application Fee
+                      <FontAwesomeIcon icon={faPlus} className="plus-icon" />
+                    </button>
+                    <button onClick={() => openModal('location')}>Location
+                      <FontAwesomeIcon icon={faPlus} className="plus-icon" />
+                    </button>
+                    <button onClick={() => openModal('location')}>Duration
+                      <FontAwesomeIcon icon={faPlus} className="plus-icon" />
+                    </button>
+                    <button onClick={() => openModal('location')}>Discipline
+                      <FontAwesomeIcon icon={faPlus} className="plus-icon" />
+                    </button>
+                    <button onClick={() => openModal('location')}>Deadline
+                      <FontAwesomeIcon icon={faPlus} className="plus-icon" />
+                    </button>
 
 
                 </div>

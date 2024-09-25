@@ -22,7 +22,9 @@ const Modal = ({ isOpen, onClose, title, options, onSubmit }) => {
 
     return (
         <div className="dropdown-menu">
-            <h2 className="dropdown-title">{title}</h2>
+            <div className="dropdown-header">
+                <h2 className="dropdown-title">{title}</h2>
+            </div>
             <form onSubmit={handleSubmit}>
                 {options.map((option, index) => (
                     <div key={index} className="dropdown-option">
