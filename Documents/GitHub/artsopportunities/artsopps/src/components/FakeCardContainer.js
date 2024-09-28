@@ -58,19 +58,19 @@ const FakeCardContainer = () => {
                 {/* Sidebar filter section */}
                 <div className="filter-section">
                   <h3>Filter By:</h3>
-                    <button onClick={() => openModal('fee')}>Application Fee
+                    <button onClick={() => openModal('fee')} className="deadline-button">Application Fee
                       <FontAwesomeIcon icon={faPlus} className="plus-icon" />
                     </button>
-                    <button onClick={() => openModal('location')}>Location
+                    <button onClick={() => openModal('location')} className="deadline-button">Location
                       <FontAwesomeIcon icon={faPlus} className="plus-icon" />
                     </button>
-                    <button onClick={() => openModal('location')}>Duration
+                    <button onClick={() => openModal('location')}  className="deadline-button">Duration
                       <FontAwesomeIcon icon={faPlus} className="plus-icon" />
                     </button>
-                    <button onClick={() => openModal('location')}>Discipline
+                    <button onClick={() => openModal('location')}  className="deadline-button">Discipline
                       <FontAwesomeIcon icon={faPlus} className="plus-icon" />
                     </button>
-                    <button onClick={() => openModal('location')}>Deadline
+                    <button onClick={() => openModal('location')} className="deadline-button">Deadline
                       <FontAwesomeIcon icon={faPlus} className="plus-icon" />
                     </button>
 

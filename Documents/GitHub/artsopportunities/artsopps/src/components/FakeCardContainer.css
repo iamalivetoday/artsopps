@@ -10,16 +10,13 @@
   width: 20%; /* Adjust width based on preference */
   background-color: #f4f4f4;
   padding: 10px;
-  text-align: left;
-
   box-sizing: border-box;
   border-right: 1px solid #ddd;
 }
 
 .filter-section button {
   display: block;
-  text-align: left;
-
+  text-align: right;
   width: 100%;
   margin-bottom: 10px;
   font-size: 1em;
@@ -35,21 +32,12 @@
   padding: 10px;
 }
 
-/* Individual card styles */
-.fake-card-container > div {
-  flex: 1 1 30%;
-  max-width: 30%;
-  margin: 10px;
-  box-sizing: border-box;
-}
-
 .card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,4 +62,15 @@
 
 .card a:hover {
   text-decoration: underline;
+}
+
+.deadline-button {
+  display: flex;
+  align-items: right; /* Vertically centers the content */
+  justify-content: space-between; /* Spreads items apart */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.plus-icon {
+  margin-left: auto; /* Pushes the icon to the far right */
 }

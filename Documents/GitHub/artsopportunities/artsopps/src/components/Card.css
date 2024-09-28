@@ -10,9 +10,27 @@
   overflow: hidden;
   height: 250px; /* Fixed height for uniformity */
   box-sizing: border-box; /* Ensure padding and border are included in width and height */
-  flex: 1 1 calc(33.333% - 64px); /* Adjust to account for the total margin */
+  flex: 1 1 calc(33.333% - 64px); /* 3 cards by default, with margins included */
   max-width: 300px;
 }
+
+/* Media query for screens smaller than 768px (typical tablet size) */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(40% - 64px); /* Adjust to 2 cards at 40% width on smaller screens */
+    max-width: none; /* Remove the fixed max-width to allow for flexibility */
+  }
+}
+
+/* Media query for even smaller screens (mobile) */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 calc(100% - 32px); /* Full width for smaller devices like phones */
+    max-width: none;
+    margin: 16px 0; /* Reduce side margins for more space */
+  }
+}
+
 
 .card-header {
   display: flex;
